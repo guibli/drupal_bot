@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
 
 /**
- * Provides an interface defining a drupal bot entity type.
+ * Provides an interface defining a drupal bot message entity type.
  */
 interface DrupalBotMessageInterface extends ContentEntityInterface, EntityOwnerInterface, EntityChangedInterface {
 

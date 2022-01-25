@@ -1,0 +1,12 @@
+drupal_bot.drupal_bot_message_type.*:
+  type: config_entity
+  label: 'Drupal Bot Message type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

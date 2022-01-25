@@ -3,3 +3,15 @@ drupal_bot_message.add_form:
   route_name: entity.drupal_bot_message.add_form
   appears_on:
     - entity.drupal_bot_message.collection
+
+drupal_bot_message.type_add:
+  title: 'Add drupal bot message type'
+  route_name: entity.drupal_bot_message_type.add_form
+  appears_on:
+    - entity.drupal_bot_message_type.collection
+
+drupal_bot_message.add_page:
+  title: 'Add drupal bot message'
+  route_name: entity.drupal_bot_message.add_page
+  appears_on:
+    - entity.drupal_bot_message.collection

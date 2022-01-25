@@ -8,3 +8,14 @@ entity.drupal_bot_message.delete_form:
   group: drupal_bot_message
   title: Delete
   weight: 10
+
+entity.drupal_bot_message.edit_form:
+  route_name: entity.drupal_bot_message.edit_form
+  group: drupal_bot_message
+  title: Edit
+
+entity.drupal_bot_message.delete_form:
+  route_name: entity.drupal_bot_message.delete_form
+  group: drupal_bot_message
+  title: Delete
+  weight: 10

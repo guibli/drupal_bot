@@ -15,3 +15,9 @@ entity.drupal_bot_message.collection:
   description: 'List of drupal bots.'
   route_name: entity.drupal_bot_message.collection
   parent: system.admin_content
+
+entity.drupal_bot_message_type.collection:
+  title: 'Drupal Bot Message types'
+  description: 'Manage and CRUD actions on Drupal Bot Message type.'
+  parent: system.admin_structure
+  route_name: entity.drupal_bot_message_type.collection

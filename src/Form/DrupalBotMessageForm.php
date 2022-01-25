@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for the drupal bot entity edit forms.
+ * Form controller for the drupal bot message entity edit forms.
  */
 class DrupalBotMessageForm extends ContentEntityForm {
 
@@ -26,13 +26,13 @@ class DrupalBotMessageForm extends ContentEntityForm {
 
     switch ($result) {
       case SAVED_NEW:
-        $this->messenger()->addStatus($this->t('New drupal bot %label has been created.', $message_arguments));
-        $this->logger('drupal_bot')->notice('Created new drupal bot %label', $logger_arguments);
+        $this->messenger()->addStatus($this->t('New drupal bot message %label has been created.', $message_arguments));
+        $this->logger('drupal_bot')->notice('Created new drupal bot message %label', $logger_arguments);
         break;
 
       case SAVED_UPDATED:
-        $this->messenger()->addStatus($this->t('The drupal bot %label has been updated.', $message_arguments));
-        $this->logger('drupal_bot')->notice('Updated drupal bot %label.', $logger_arguments);
+        $this->messenger()->addStatus($this->t('The drupal bot message %label has been updated.', $message_arguments));
+        $this->logger('drupal_bot')->notice('Updated drupal bot message %label.', $logger_arguments);
         break;
     }
 

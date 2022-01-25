@@ -11,18 +11,19 @@ use Drupal\drupal_bot\DrupalBotMessageInterface;
 use Drupal\user\EntityOwnerTrait;
 
 /**
- * Defines the drupal bot entity class.
+ * Defines the drupal bot message entity class.
  *
  * @ContentEntityType(
  *   id = "drupal_bot_message",
- *   label = @Translation("Drupal bot"),
- *   label_collection = @Translation("Drupal bots"),
- *   label_singular = @Translation("drupal bot"),
- *   label_plural = @Translation("drupal bots"),
+ *   label = @Translation("Drupal Bot Message"),
+ *   label_collection = @Translation("Drupal Bot Messages"),
+ *   label_singular = @Translation("drupal bot message"),
+ *   label_plural = @Translation("drupal bot messages"),
  *   label_count = @PluralTranslation(
- *     singular = "@count drupal bots",
- *     plural = "@count drupal bots",
+ *     singular = "@count drupal bot messages",
+ *     plural = "@count drupal bot messages",
  *   ),
+ *   bundle_label = @Translation("Drupal Bot Message type"),
  *   handlers = {
  *     "list_builder" = "Drupal\drupal_bot\DrupalBotMessageListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
@@ -39,22 +40,25 @@ use Drupal\user\EntityOwnerTrait;
  *   base_table = "drupal_bot_message",
  *   data_table = "drupal_bot_message_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer drupal bot message",
+ *   admin_permission = "administer drupal bot message types",
  *   entity_keys = {
  *     "id" = "id",
  *     "langcode" = "langcode",
+ *     "bundle" = "bundle",
  *     "label" = "label",
  *     "uuid" = "uuid",
  *     "owner" = "uid",
  *   },
  *   links = {
  *     "collection" = "/admin/content/drupal-bot-message",
- *     "add-form" = "/drupal-bot-message/add",
+ *     "add-form" = "/drupal-bot-message/add/{drupal_bot_message_type}",
+ *     "add-page" = "/drupal-bot-message/add",
  *     "canonical" = "/drupal-bot-message/{drupal_bot_message}",
  *     "edit-form" = "/drupal-bot-message/{drupal_bot_message}/edit",
  *     "delete-form" = "/drupal-bot-message/{drupal_bot_message}/delete",
  *   },
- *   field_ui_base_route = "entity.drupal_bot_message.settings",
+ *   bundle_entity_type = "drupal_bot_message_type",
+ *   field_ui_base_route = "entity.drupal_bot_message_type.edit_form",
  * )
  */
 class DrupalBotMessage extends ContentEntityBase implements DrupalBotMessageInterface {
@@ -159,7 +163,7 @@ class DrupalBotMessage extends ContentEntityBase implements DrupalBotMessageInte
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Authored on'))
       ->setTranslatable(TRUE)
-      ->setDescription(t('The time that the drupal bot was created.'))
+      ->setDescription(t('The time that the drupal bot message was created.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'timestamp',
@@ -175,7 +179,7 @@ class DrupalBotMessage extends ContentEntityBase implements DrupalBotMessageInte
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setTranslatable(TRUE)
-      ->setDescription(t('The time that the drupal bot was last edited.'));
+      ->setDescription(t('The time that the drupal bot message was last edited.'));
 
     return $fields;
   }

@@ -10,7 +10,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a list controller for the drupal bot entity type.
+ * Provides a list controller for the drupal bot message entity type.
  */
 class DrupalBotMessageListBuilder extends EntityListBuilder {
 
@@ -59,7 +59,7 @@ class DrupalBotMessageListBuilder extends EntityListBuilder {
       ->count()
       ->execute();
 
-    $build['summary']['#markup'] = $this->t('Total drupal bots: @total', ['@total' => $total]);
+    $build['summary']['#markup'] = $this->t('Total drupal bot messages: @total', ['@total' => $total]);
     return $build;
   }
 

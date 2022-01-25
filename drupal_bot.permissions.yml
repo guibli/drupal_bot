@@ -14,3 +14,16 @@ view drupal bot:
   title: View drupal bot
 edit drupal bot:
   title: Edit drupal bot
+
+administer drupal bot message types:
+  title: 'Administer drupal bot message types'
+  description: 'Maintain the types of drupal bot message entity.'
+  restrict access: true
+delete drupal bot message:
+  title: Delete drupal bot message
+create drupal bot message:
+  title: Create drupal bot message
+view drupal bot message:
+  title: View drupal bot message
+edit drupal bot message:
+  title: Edit drupal bot message

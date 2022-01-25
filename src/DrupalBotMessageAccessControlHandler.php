@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
 
 /**
- * Defines the access control handler for the drupal bot entity type.
+ * Defines the access control handler for the drupal bot message entity type.
  */
 class DrupalBotMessageAccessControlHandler extends EntityAccessControlHandler {
 
@@ -19,19 +19,19 @@ class DrupalBotMessageAccessControlHandler extends EntityAccessControlHandler {
 
     switch ($operation) {
       case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view drupal bot');
+        return AccessResult::allowedIfHasPermission($account, 'view drupal bot message');
 
       case 'update':
         return AccessResult::allowedIfHasPermissions(
           $account,
-          ['edit drupal bot', 'administer drupal bot'],
+          ['edit drupal bot message', 'administer drupal bot message'],
           'OR',
         );
 
       case 'delete':
         return AccessResult::allowedIfHasPermissions(
           $account,
-          ['delete drupal bot', 'administer drupal bot'],
+          ['delete drupal bot message', 'administer drupal bot message'],
           'OR',
         );
 
@@ -48,7 +48,7 @@ class DrupalBotMessageAccessControlHandler extends EntityAccessControlHandler {
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
     return AccessResult::allowedIfHasPermissions(
       $account,
-      ['create drupal bot', 'administer drupal bot'],
+      ['create drupal bot message', 'administer drupal bot message'],
       'OR',
     );
   }
