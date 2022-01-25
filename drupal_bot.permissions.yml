@@ -1,0 +1,16 @@
+administer drupal_bot configuration:
+  title: 'Administer drupal_bot configuration'
+  description: 'Optional description.'
+  restrict access: true
+
+administer drupal bot:
+  title: 'Administer drupal bot settings'
+  restrict access: true
+delete drupal bot:
+  title: Delete drupal bot
+create drupal bot:
+  title: Create drupal bot
+view drupal bot:
+  title: View drupal bot
+edit drupal bot:
+  title: Edit drupal bot

@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Drupal Bot module.
+drupal_bot.settings:
+  type: config_object
+  label: 'Drupal Bot settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

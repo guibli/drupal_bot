@@ -1,0 +1,22 @@
+entity.drupal_bot_message.settings:
+  title: 'Settings'
+  route_name: entity.drupal_bot_message.settings
+  base_route: entity.drupal_bot_message.settings
+entity.drupal_bot_message.view:
+  title: 'View'
+  route_name: entity.drupal_bot_message.canonical
+  base_route: entity.drupal_bot_message.canonical
+entity.drupal_bot_message.edit_form:
+  title: 'Edit'
+  route_name: entity.drupal_bot_message.edit_form
+  base_route: entity.drupal_bot_message.canonical
+entity.drupal_bot_message.delete_form:
+  title: 'Delete'
+  route_name: entity.drupal_bot_message.delete_form
+  base_route: entity.drupal_bot_message.canonical
+  weight: 10
+entity.drupal_bot_message.collection:
+  title: 'Drupal bots'
+  route_name: entity.drupal_bot_message.collection
+  base_route: system.admin_content
+  weight: 10

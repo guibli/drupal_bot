@@ -1,0 +1,17 @@
+drupal_bot.settings_form:
+  title: 'Drupal Bot'
+  description: 'Configure Drupal Bot.'
+  parent: system.admin_config_system
+  route_name: drupal_bot.settings_form
+  weight: 10
+
+entity.drupal_bot_message.settings:
+  title: 'Drupal bot'
+  description: 'Configure a Drupal bot entity type.'
+  route_name:  entity.drupal_bot_message.settings
+  parent: system.admin_structure
+entity.drupal_bot_message.collection:
+  title: 'Drupal bots'
+  description: 'List of drupal bots.'
+  route_name: entity.drupal_bot_message.collection
+  parent: system.admin_content

@@ -1,0 +1,9 @@
+name: Drupal Bot
+type: module
+description: Send message to slack, mail etc ...
+package: Drupal Bot
+core_version_requirement: ^9 || ^10
+dependencies:
+  - slack
+  - scheduler
+  - rest

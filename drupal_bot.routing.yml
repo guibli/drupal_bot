@@ -1,0 +1,23 @@
+drupal_bot.example:
+  path: '/drupal-bot/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\drupal_bot\Controller\DrupalBotController::build'
+  requirements:
+    _permission: 'access content'
+
+drupal_bot.settings_form:
+  path: '/admin/config/system/drupal-bot'
+  defaults:
+    _title: 'Drupal Bot settings'
+    _form: 'Drupal\drupal_bot\Form\SettingsForm'
+  requirements:
+    _permission: 'administer drupal_bot configuration'
+
+entity.drupal_bot_message.settings:
+  path: 'admin/structure/drupal-bot-message'
+  defaults:
+    _form: '\Drupal\drupal_bot\Form\DrupalBotMessageSettingsForm'
+    _title: 'Drupal bot'
+  requirements:
+    _permission: 'administer drupal bot'

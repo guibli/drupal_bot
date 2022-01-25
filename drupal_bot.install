@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Drupal Bot module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drupal_bot_install() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function drupal_bot_uninstall() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function drupal_bot_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'runtime') {
+    $value = mt_rand(0, 100);
+    $requirements['drupal_bot_status'] = [
+      'title' => t('Drupal Bot status'),
+      'value' => t('Drupal Bot value: @value', ['@value' => $value]),
+      'severity' => $value > 50 ? REQUIREMENT_INFO : REQUIREMENT_WARNING,
+    ];
+  }
+
+  return $requirements;
+}
