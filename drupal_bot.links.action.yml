@@ -1,0 +1,5 @@
+drupal_bot_message.add_form:
+  title: 'Add drupal bot'
+  route_name: entity.drupal_bot_message.add_form
+  appears_on:
+    - entity.drupal_bot_message.collection

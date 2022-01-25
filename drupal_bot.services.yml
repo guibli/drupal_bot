@@ -1,0 +1,6 @@
+services:
+  drupal_bot.event_subscriber:
+    class: Drupal\drupal_bot\EventSubscriber\DrupalBotSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
