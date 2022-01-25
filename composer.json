@@ -1,0 +1,10 @@
+{
+    "name": "guibli/drupal_bot",
+    "description": "Drupal Bot.",
+    "type": "drupal-custom-module",
+    "require": {
+        "drupal/restui": "^1.20",
+        "drupal/scheduler": "^2.0",
+        "drupal/slack": "^1.3"
+    }
+}
